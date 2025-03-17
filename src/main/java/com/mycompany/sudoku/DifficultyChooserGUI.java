@@ -389,9 +389,9 @@ public class DifficultyChooserGUI extends javax.swing.JFrame {
     private void BtnPuzzleSelectActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnPuzzleSelectActionPerformed
         // TODO add your handling code here:
         String type = LabelDifficulity.getText();
-        System.out.println(type);
+//        System.out.println(type);
         int puzzleNumber = count;
-        System.out.println(puzzleNumber);
+//        System.out.println(puzzleNumber);
 
         String[] puzzle = {
             "--74916-5",
@@ -419,22 +419,22 @@ public class DifficultyChooserGUI extends javax.swing.JFrame {
 
         switch (type) {
             case "Easy" -> {
-                System.out.println("Case Easy");
+//                System.out.println("Case Easy");
                 puzzle = puzzlesAndSolutions.getPuzzleEasy()[puzzleNumber];
                 solution = puzzlesAndSolutions.getSolutionEasy()[puzzleNumber];
             }
             case "Inter" -> {
-                System.out.println("Case Inter");
+//                System.out.println("Case Inter");
                 puzzle = puzzlesAndSolutions.getPuzzlesInter()[puzzleNumber];
                 solution = puzzlesAndSolutions.getSolutionInter()[puzzleNumber];
             }
             case "Hard" -> {
-                System.out.println("Case Hard");
+//                System.out.println("Case Hard");
                 puzzle = puzzlesAndSolutions.getPuzzlesHard()[puzzleNumber];
                 solution = puzzlesAndSolutions.getSolutionsHard()[puzzleNumber];
             }
             case "Expert" -> {
-                System.out.println("Case Expert");
+//                System.out.println("Case Expert");
                 puzzle = puzzlesAndSolutions.getPuzzlesExpert()[puzzleNumber];
                 solution = puzzlesAndSolutions.getSolutionsExpert()[puzzleNumber];
             }
@@ -538,7 +538,7 @@ public class DifficultyChooserGUI extends javax.swing.JFrame {
         LabelPuzzleImages.setIcon(currentPuzzles[count]);
     }
 
-    public static BufferedImage resizeImage(BufferedImage originalImage, int width, int height) {
+    public BufferedImage resizeImage(BufferedImage originalImage, int width, int height) {
         Image tmp = originalImage.getScaledInstance(width, height, Image.SCALE_SMOOTH);
         BufferedImage resized = new BufferedImage(width, height, BufferedImage.TYPE_INT_ARGB);
 
