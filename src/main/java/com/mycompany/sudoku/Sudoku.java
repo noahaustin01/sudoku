@@ -124,13 +124,12 @@ public class Sudoku {
                                         correctCount++;
                                     }
                                     if (correctCount == 9) {
-                                    JOptionPane.showMessageDialog(textPanel, "You WON!!!!!");
-                                    DifficultyChooserGUI chooser = new DifficultyChooserGUI();
-                                    frame.dispose();
-                                    chooser.setVisible(true);
+                                        JOptionPane.showMessageDialog(textPanel, "You WON!!!!!");
+                                        DifficultyChooserGUI chooser = new DifficultyChooserGUI();
+                                        frame.dispose();
+                                        chooser.setVisible(true);
+                                    }
                                 }
-                                }
-                                
 
                             } else {
                                 errors += 1;
