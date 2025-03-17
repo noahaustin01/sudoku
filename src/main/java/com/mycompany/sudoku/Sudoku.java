@@ -119,26 +119,26 @@ public class Sudoku {
                                 tile.setText(numSelectedText);
                                 puzzle[r] = puzzle[r].substring(0, c) + numSelectedText + puzzle[r].substring(c + 1, 9);
                                 int correctCount = 0;
-                                for (int p = 0; p <= 9; p++) {
+                                for (int p = 0; p < 9; p++) {
                                     if (puzzle[p].equals(solution[p])) {
                                         correctCount++;
-
                                     }
-                                }
-                                if (correctCount == 9) {
+                                    if (correctCount == 9) {
                                     JOptionPane.showMessageDialog(textPanel, "You WON!!!!!");
                                     DifficultyChooserGUI chooser = new DifficultyChooserGUI();
                                     frame.dispose();
                                     chooser.setVisible(true);
                                 }
+                                }
+                                
 
                             } else {
                                 errors += 1;
                                 textLabel.setText("Sudoku: " + puzzle_number + "\n  Errors: " + errors);
                                 for (int i = 0; i < 8; i++) {
-                                    System.out.println(puzzle[i]);
+//                                    System.out.println(puzzle[i]);
                                 }
-                                System.out.println("");
+//                                System.out.println("");
 
                             }
 
